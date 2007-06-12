@@ -1,9 +1,7 @@
 /**
  * @author 	Maxime Haineault <max@centdessin.com>
- * @package	scriptaculous
  * @version	0.8
  * @desc 	Library to handle forms and data validation
- * 
  */
 Object.extend(Form.Methods,{	
   validate: function(element) {

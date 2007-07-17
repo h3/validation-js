@@ -1,7 +1,11 @@
 /**
+ * validate.js
+ *
  * @author 	Maxime Haineault <max@centdessin.com>
  * @version	0.8
  * @desc 	Library to handle forms and data validation
+ * @todo
+ *  - isValidEmail: fix 2 character domains validation
  */
 Object.extend(Form.Methods,{	
   validate: function(element) {
@@ -50,7 +54,6 @@ Object.extend(Form.Element.Methods,{
   isNotEmpty: function(element) {
   	return !$F(element) == '';
   },
-  
   isValid: function(element) {
   		idValid = true;
 		element.className.match(/isValid\w{1,}/g).each(function(className) {
@@ -88,7 +91,7 @@ Object.extend(Form.Element.Methods,{
   	  dt = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})$/);
   	  return dt && !!(dt[1]<=9999 && dt[2]<=12 && dt[3]<=31 && dt[4]<=59 && dt[5]<=59 && dt[6]<=59) || false;
   },
-  // 0000-00-00 to 9999:12:31
+  // 0000-00-00 to 9999-12-31
   isValidDate: function(element) {
   	  d = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})$/);
   	  return d && !!(d[1]<=9999 && d[2]<=12 && d[3]<=31) || false;

@@ -1,0 +1,9 @@
+~ 0.9
+
+- MANDATORY TODO: Fix isValidEmail validation problem with 2 characters domain
+
+~ 0.8
+
+* Added README, MIT-LICENSE and CHANGELOG
+
+* Fixed typo in comments, added todo

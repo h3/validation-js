@@ -7,6 +7,7 @@
  * @todo
  *  - isValidEmail: fix 2 character domains validation
  */
+
 Object.extend(Form.Methods,{	
   validate: function(element) {
   	hasErrors = false;
@@ -55,13 +56,12 @@ Object.extend(Form.Element.Methods,{
   	return !$F(element) == '';
   },
   isValid: function(element) {
-  		idValid = true;
-		element.className.match(/isValid\w{1,}/g).each(function(className) {
-			if(!$(element)[className]()) idValid = false;
-		});
-		return idValid;
-	},
-  // those two functions might seem redundant but they are required by the form validation method..
+  	idValid = true;
+  	element.className.match(/isValid\w{1,}/g).each(function(className) {
+  		if(!$(element)[className]()) idValid = false;
+  	});
+  	return idValid;
+  },
   isValidEmpty: function(element) {
   	return Form.Element.Methods.isEmpty(element);
   },
@@ -88,18 +88,18 @@ Object.extend(Form.Element.Methods,{
   },
   // 0000-00-00 00:00:00 to 9999:12:31 59:59:59 (no it is not a "valid DATE" function)
   isValidDatetime: function(element) {
-  	  dt = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})$/);
-  	  return dt && !!(dt[1]<=9999 && dt[2]<=12 && dt[3]<=31 && dt[4]<=59 && dt[5]<=59 && dt[6]<=59) || false;
+  	dt = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})$/);
+  	return dt && !!(dt[1]<=9999 && dt[2]<=12 && dt[3]<=31 && dt[4]<=59 && dt[5]<=59 && dt[6]<=59) || false;
   },
   // 0000-00-00 to 9999-12-31
   isValidDate: function(element) {
-  	  d = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  	  return d && !!(d[1]<=9999 && d[2]<=12 && d[3]<=31) || false;
+  	d = $F(element).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  	return d && !!(d[1]<=9999 && d[2]<=12 && d[3]<=31) || false;
   },
   // 00:00:00 to 59:59:59
   isValidTime: function(element) {
-  	  t = $F(element).match(/^(\d{1,2}):(\d{1,2}):(\d{1,2})$/);
-  	  return t && !!(t[1]<=24 && t[2]<=59 && t[3]<=59) || false;
+  	t = $F(element).match(/^(\d{1,2}):(\d{1,2}):(\d{1,2})$/);
+  	return t && !!(t[1]<=24 && t[2]<=59 && t[3]<=59) || false;
   },
   // 0.0.0.0 to 255.255.255.255
   isValidIPv4: function(element) { 

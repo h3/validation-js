@@ -1,0 +1,26 @@
+== validate.js
+
+    Validate is a small JavaScript form validation library aimed to 
+help me in the process of building rich and responsive web applications.
+The Prototype framework is needed to make it work. (www.prototypejs.org)
+
+The point here is not security, you will never achieve security with client 
+side validation and it's a known paradigm. But with the growing popularity 
+of ajax, this kind of validation has it's place I think.
+
+== Installation/Usage
+
+You can include the script has you would usually do, just put those tag
+in the head of your page:
+
+ <script src="/javascripts/prototype.js" type="text/javascript"></script>
+ <script src="/javascripts/validate.js" type="text/javascript"></script>
+
+Tip: You can easily integrate to the scriptaculous javascript framework
+     and take advantage of their dynamic inclusion capabilities.
+     Note that you will have to modify the scriptaculous.js file.
+
+== License
+
+Validate.js is licensed under the terms of the MIT License, 
+see the included MIT-LICENSE file.

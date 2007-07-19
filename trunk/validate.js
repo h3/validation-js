@@ -2,10 +2,10 @@
  * validate.js
  *
  * @author 	Maxime Haineault <max@centdessin.com>
- * @version	0.8
+ * @version	0.9
  * @desc 	Library to handle forms and data validation
  * @todo
- *  - isValidEmail: fix 2 character domains validation
+ *  - make unit tests for form validation
  */
 
 Object.extend(Form.Methods,{	
@@ -74,8 +74,8 @@ Object.extend(Form.Element.Methods,{
   isValidBoolean: function(element) {
   	return !!$F(element).match(/^(0|1|true|false)$/);
   },
-  isValidEmail: function(element) { // TODO: two letters domains like .ca or .us doesn't validate..
-  	return !!$F(element).match(/(^[a-z]([a-z_\.]*)@([a-z_\.]*)([.][a-z]{3})$)|(^[a-z]([a-z_\.]*)@([a-z_\-\.]*)(\.[a-z]{3})(\.[a-z]{2})*$)/i); 
+  isValidEmail: function(element) {
+  	return !!$F(element).match(/(^[a-z]([a-z_\.]*)@([a-z_\.]*)([.][a-z]{2,3})$)|(^[a-z]([a-z_\.]*)@([a-z_\-\.]*)(\.[a-z]{3})(\.[a-z]{2})*$)/i); 
   },
   isValidInteger: function(element) {
   	return !!$F(element).match(/(^-?\d+$)/);

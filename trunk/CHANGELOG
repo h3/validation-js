@@ -1,4 +1,26 @@
+~ 1.0
+
 ~ 0.9 (rev. 7)
+
+* added class attribute initialization (only support default callback function)
+
+* enhenced default validation callback function, now support error message display before or after the input
+
+* fixed form validation
+
+* added default (denos) styles (see tests/index.html)
+
+* added form validation tests
+
+* added validation error messages (english)
+
+* added isUnModified
+
+* removed isValidEmpty, isValidNotEmpty, isValidRequired because of their ambiguity
+
+* removed isRequired (use isNotEmpty instead)
+
+* code cleanup, optimizations, added some comments
 
 * Added unit tests
 

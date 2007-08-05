@@ -1,6 +1,6 @@
 ~ 1.0
 
-~ 0.9 (rev. 7)
+~ 0.9 (rev. 9)
 
 * added class attribute initialization (only support default callback function)
 

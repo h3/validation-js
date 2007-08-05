@@ -1,14 +1,16 @@
 ~ 1.0
 
+* corrected some typos in changelog
+
 ~ 0.9 (rev. 9)
 
 * added class attribute initialization (only support default callback function)
 
-* enhenced default validation callback function, now support error message display before or after the input
+* enhanced default validation callback function, now support error message display before or after the input
 
 * fixed form validation
 
-* added default (denos) styles (see tests/index.html)
+* added default (demos) styles (see tests/index.html)
 
 * added form validation tests
 

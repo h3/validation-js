@@ -10,14 +10,14 @@
 Validation = {
   version: 0.9,
   en:      'en',
-  insert:  'After',
+  insert:  'After'
 }
 
 Validation.messages = {
   isModified:          'This field must be modified.',
   isUnModified:        'This field must be not modified.',
   isEmpty:             'This field must be empty.',
-  isNotEmpty:          'This field must not be empty.',
+  isNotEmpty:          'Ce champ est obligatoire.',
   isValidBoolean:      'This field must be boolean',
   isValidEmail:        'This field must be a valid e-mail address.',
   isValidInteger:      'This field must be a valid integer.',
